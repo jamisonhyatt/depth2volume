@@ -17,7 +17,7 @@ This, of course, means the more measurements you take, the more accurate this to
 Units don't matter, as long as they're all the same units.  
 
 # Example usage
-Calculate the volume needed to fill the [sample csv](./depths-sample.csv) with a 12ft x 27ft square (144 x 324 inches) at a starting depth of 1.25"
+Calculate the volume needed to fill an area 24x54ft [sample csv](./depths-sample.csv) - measurements were every 12ft and 27ft, with a starting depth of 1.25"
 
 ``` 
 $> go run main.go \
