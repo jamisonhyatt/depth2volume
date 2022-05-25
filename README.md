@@ -4,13 +4,13 @@ dumb utility to calculate total volume to fill/excavate from a set of grade meas
 # How to measure
 The measurements you would typically due with a laser level, and you would pass your "zero" measurement as `-initial-depth`.   Measurements greater than 
 the zero value would necessitate fill being brought in to the area, while measurements less than the zero value would require removing soil. The measurements 
-must be made in equidistant grids for this to work.  
+must be made in identical increments, but need not be squares.  IE if your yard was 200ft long by 100ft wide - you could measure every 20 feet for the length, but every 10 feet for the width.
 
 # How does this work
-It's dumb.  It operates on a grid, and for each square in the grid finds an average of all 4 measurements (1 at each corner) i.e., `(m1 + m2 + m3 + m4)/4` and then
-subtracts the zero value to get a net volume needed for that square.
+It's dumb.  It operates on a grid, and for each cell in the grid finds an average of all 4 measurements (1 at each corner) i.e., `(m1 + m2 + m3 + m4)/4` and then
+subtracts the zero value to get a net volume needed for that cell.
 
-The total volume is just the sum of all the individual volumes from the squares
+The total volume is just the sum of all the individual volumes from the cells.
 
 This, of course, means the more measurements you take, the more accurate this tool becomes.
 
